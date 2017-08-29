@@ -12,6 +12,7 @@ import {
   SignupFormComponent,
   PersonalityTestComponent,
   QuestionComponent,
+  QuestionPageComponent,
   ResultsComponent
 } from './components';
 
@@ -25,7 +26,8 @@ import { PersonalityTestService } from './personality-test.service';
     SignupFormComponent,
     PersonalityTestComponent,
     QuestionComponent,
-    ResultsComponent
+    ResultsComponent,
+    QuestionPageComponent
   ],
   imports: [
     BrowserModule,
