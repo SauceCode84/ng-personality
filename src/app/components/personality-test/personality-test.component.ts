@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-personality-test',
+  selector: 'ngp-test',
   templateUrl: './personality-test.component.html',
   styleUrls: ['./personality-test.component.scss']
 })
