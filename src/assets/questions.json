@@ -1,15 +1,29 @@
 [
   {
     "no": 1,
-    "text": "",
+    "text": "When the phone rings do you",
     "options": [
       {
-        "text": "",
-        "value": ""
+        "text": "hurry to get to it first",
+        "value": "E"
       },
       {
-        "text": "",
-        "value": ""
+        "text": "hope someone else will answer",
+        "value": "I"
+      }
+    ]
+  },
+  {
+    "no": 2,
+    "text": "Are you more",
+    "options": [
+      {
+        "text": "observant than introspective",
+        "value": "S"
+      },
+      {
+        "text": "introspective than observant",
+        "value": "N"
       }
     ]
   }
