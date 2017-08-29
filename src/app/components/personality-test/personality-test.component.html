@@ -4,3 +4,6 @@
   [(answer)]="currentTest[question.no]">
 </ngp-question>
 <pre>{{ currentTest | json }}</pre>
+
+<button (click)="onPrevious()">Prev</button>
+<button (click)="onNext()">Next</button>

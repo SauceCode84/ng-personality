@@ -17,4 +17,12 @@ export class PersonalityTestComponent implements OnInit {
     this.questions = this.testService.getQuestions();
   }
 
+  onPrevious() {
+
+  }
+
+  onNext() {
+    
+  }
+
 }
