@@ -4,9 +4,12 @@
 
 $font-lato: "Lato" !default;
 
+$color-wisteria: #8e44ad;
+$color-default: #33c3f0;
+
 $light-grey: #e1e1e1 !default;
 $dark-grey: #333 !default;
-$primary-color: #33c3f0 !default;
+$primary-color: $color-default !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
 $link-color: #1eaedb !default;
@@ -47,7 +50,7 @@ button,
   cursor: pointer;
   box-sizing: border-box;
 
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
 
   &:hover,
   &:focus {
@@ -67,6 +70,22 @@ button.button-primary,
     color: #FFFFFF;
     background-color: $link-color;
     border-color: $link-color;
+  }
+}
+
+button.button-outline-primary,
+.button.button-outline-primary {
+  color: $primary-color;
+  border-color: $primary-color;
+  background-color: #FFFFFF;
+
+  &:hover {
+    color: #FFFFFF;
+    background-color: $primary-color;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba($primary-color ,0.5);
   }
 }
 
