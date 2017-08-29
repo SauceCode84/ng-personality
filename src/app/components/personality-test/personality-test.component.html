@@ -1,1 +1,6 @@
-<ngp-question></ngp-question>
+<ngp-question
+  *ngFor="let question of questions | async"
+  [question]="question"
+  (valueSelected)="onValueSelected($event)">
+</ngp-question>
+<pre></pre>

@@ -1,4 +1,11 @@
-<form>
-  <ngp-question-option></ngp-question-option>
-  <ngp-question-option></ngp-question-option>
-</form>
+<div>
+  {{ question.no }}. {{ question.text }}
+  <div *ngFor="let option of question.options">
+    <input
+      type="radio"
+      [name]="'question' + question.no"
+      [(ngModel)]="value"
+      [value]="option.value"
+      (change)="onOptionChange($event)">{{ option.text }}<br>
+  </div>
+</div>
