@@ -1,6 +1,6 @@
 <ngp-question
   *ngFor="let question of questions | async"
   [question]="question"
-  (valueSelected)="onValueSelected($event)">
+  [(answer)]="currentTest[question.no]">
 </ngp-question>
-<pre></pre>
+<pre>{{ currentTest | json }}</pre>

@@ -4,8 +4,7 @@
     <input
       type="radio"
       [name]="'question' + question.no"
-      [(ngModel)]="value"
-      [value]="option.value"
-      (change)="onOptionChange($event)">{{ option.text }}<br>
+      [(ngModel)]="answer"
+      [value]="option.value">{{ option.text }}<br>
   </div>
 </div>

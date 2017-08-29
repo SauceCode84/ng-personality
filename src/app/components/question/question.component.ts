@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 type ValueSelectedResult = { questionNo: number, value: string };
 
@@ -7,22 +7,26 @@ type ValueSelectedResult = { questionNo: number, value: string };
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss']
 })
-export class QuestionComponent implements OnInit {
+export class QuestionComponent {
 
   @Input()
   question;
-  value: string;
+  
+  answerValue: string;
+
+  @Input()
+  get answer() {
+    return this.answerValue;
+  }
+
+  set answer(value) {
+    this.answerValue = value;
+    this.answerChange.emit(this.answerValue);
+  }
 
   @Output()
-  valueSelected: EventEmitter<ValueSelectedResult> = new EventEmitter<ValueSelectedResult>();
+  answerChange = new EventEmitter();
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
-  onOptionChange(e) {
-    this.valueSelected.emit({ questionNo: this.question.no, value: this.value });
-  }
 
 }

@@ -7,17 +7,14 @@ import { PersonalityTestService } from "../../personality-test.service";
   styleUrls: ['./personality-test.component.scss']
 })
 export class PersonalityTestComponent implements OnInit {
-
+  
   questions;
+  currentTest = {};
 
   constructor(private testService: PersonalityTestService) { }
 
   ngOnInit() {
     this.questions = this.testService.getQuestions();
-  }
-
-  onValueSelected(value) {
-    console.log(value);
   }
 
 }
