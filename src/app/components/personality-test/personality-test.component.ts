@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonalityTestService } from "../../personality-test.service";
 
 @Component({
   selector: 'ngp-test',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalityTestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private testService: PersonalityTestService) { }
 
   ngOnInit() {
   }
