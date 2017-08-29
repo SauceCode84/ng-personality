@@ -2,8 +2,71 @@
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
 
-$font-lato: "Lato";
+$font-lato: "Lato" !default;
+
+$light-grey: #e1e1e1 !default;
+$dark-grey: #333 !default;
+$primary-color: #33c3f0 !default;
+$secondary-color: lighten($dark-grey, 13.5%) !default;
+$border-color: #bbb !default;
+$link-color: #1eaedb !default;
+$font-color: #222 !default;
+
+$global-radius: 4px !default;
+
+html {
+  font-size: 62.5%;
+}
 
 body {
+  font-size: 1.5em;
   font-family: $font-lato;
+  font-weight: 500;
+  line-height: 1.6;
+  color: $font-color;
 }
+
+button,
+.button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: $secondary-color;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 900;
+  font-family: $font-lato;
+  line-height: 34px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: $global-radius;
+  border: 2px solid $border-color;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    color: $dark-grey;
+    border-color: lighten($dark-grey, 33.3%);
+    outline: 0;
+  }
+}
+
+button.button-primary,
+.button.button-primary {
+  color: #FFFFFF;
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    color: #FFFFFF;
+    background-color: $link-color;
+    border-color: $link-color;
+  }
+}
+
