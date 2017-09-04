@@ -1,4 +1,6 @@
 
+@import "../../../styles";
+
 .container ul {
   list-style: none;
   margin: 0;
@@ -6,9 +8,14 @@
   overflow: auto;
 }
 
+.question {
+  font-size: 2.0rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+}
+
 ul {
   li {
-    //color: #AAAAAA;
     display: block;
     position: relative;
     float: left;
@@ -37,7 +44,7 @@ ul {
     .check {
       display: block;
       position: absolute;
-      border: 5px solid #333;
+      border: 5px solid $font-color;
       border-radius: 100%;
       height: 25px;
       width: 25px;
@@ -62,11 +69,11 @@ ul {
 
     &:hover {
       label {
-        color: #33c3f0;
+        color: $primary-color;
       }
 
       .check {
-        border-color: #33c3f0;
+        border-color: $primary-color;
       }
     }
   }
@@ -75,14 +82,14 @@ ul {
 input[type=radio]:checked {
   ~ {
     label {
-      color: #33c3f0;
+      color: $primary-color;
     }
 
     .check {
-      border: 5px solid #33c3f0;
+      border: 5px solid $primary-color;
 
       &::before {
-        background: #33c3f0;
+        background: $primary-color;
       }
     }
   }

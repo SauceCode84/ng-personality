@@ -1,35 +1,15 @@
-<div>
-  {{ question.no }}. {{ question.text }}
-  <div *ngFor="let option of question.options">
-    <input
-      type="radio"
-      [name]="'question' + question.no"
-      [(ngModel)]="answer"
-      [value]="option.value">{{ option.text }}<br>
-  </div>
-</div>
-
 <div class="container">
+  <span class="question">{{ question.no }}. {{ question.text }}</span>
   <ul>
-    <li>
-      <input type="radio" id="f-option" name="selector">
-      <label for="f-option">Pizza</label>
-        
+    <li *ngFor="let option of question.options">
+      <input
+        type="radio"
+        [id]="'question' + question.no + option.value"
+        [name]="'question' + question.no"
+        [(ngModel)]="answer"
+        [value]="option.value" >
+      <label [for]="'question' + question.no + option.value">{{ option.text }}</label>
       <div class="check"></div>
-    </li>
-
-    <li>
-      <input type="radio" id="s-option" name="selector">
-      <label for="s-option">Bacon</label>
-        
-      <div class="check"><div class="inside"></div></div>
-    </li>
-      
-    <li>
-      <input type="radio" id="t-option" name="selector">
-      <label for="t-option">Cats</label>
-        
-      <div class="check"><div class="inside"></div></div>
     </li>
   </ul>
 </div>
