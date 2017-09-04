@@ -4,18 +4,39 @@
 
 $font-lato: "Lato" !default;
 
-$color-wisteria: #8e44ad;
+/* Flat UI color scheme */
+
+// red
+$color-alizarin:    #E74C3C;
+$color-pomegranate: #C0392B;
+// orange
+$color-carrot:      #E67E22;
+$color-pumpkin:     #D35400;
+// yellow
+$color-sunflower:   #F1C40F;
+$color-orange:      #F39C12;
+// green
+$color-emerald:     #2ECC71;
+$color-nephritis:   #27AE60;
+// turquoise
+$color-turquoise:   #1ABC9C;
+$color-green-sea:   #16A085;
+// blue
 $color-peter-river: #3498DB;
 $color-belize-hole: #2980B9;
+// purple
+$color-amethyst:    #9B59B6;
+$color-wisteria:    #8E44AD;
 
-$color-wet-asphalt: #34495E;
+
+$color-wet-asphalt:   #34495E;
 $color-midnight-blue: #2C3E50;
 
 //$color-default: #33c3f0;
 
 $light-grey: #e1e1e1 !default;
 $dark-grey: #333 !default;
-$primary-color: $color-peter-river !default;
+$primary-color: $color-turquoise !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
 $link-color: #1eaedb !default;
@@ -74,8 +95,8 @@ button.button-primary,
 
   &:hover {
     color: #FFFFFF;
-    background-color: $link-color;
-    border-color: $link-color;
+    background-color: lighten($primary-color, 5%);
+    border-color: lighten($primary-color, 5%);
   }
 }
 
