@@ -5,15 +5,21 @@
 $font-lato: "Lato" !default;
 
 $color-wisteria: #8e44ad;
-$color-default: #33c3f0;
+$color-peter-river: #3498DB;
+$color-belize-hole: #2980B9;
+
+$color-wet-asphalt: #34495E;
+$color-midnight-blue: #2C3E50;
+
+//$color-default: #33c3f0;
 
 $light-grey: #e1e1e1 !default;
 $dark-grey: #333 !default;
-$primary-color: $color-default !default;
+$primary-color: $color-peter-river !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
 $link-color: #1eaedb !default;
-$font-color: #222 !default;
+$font-color: $color-wet-asphalt !default;
 
 $global-radius: 4px !default;
 
@@ -85,7 +91,7 @@ button.button-outline-primary,
   }
 
   &:focus {
-    box-shadow: 0 0 0 3px rgba($primary-color ,0.5);
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.5);
   }
 }
 
